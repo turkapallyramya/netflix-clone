@@ -1,0 +1,62 @@
+.movies-page {
+  padding: 40px;
+  background-color: #141414;
+  color: white;
+  min-height: 100vh;
+}
+
+.page-title {
+  font-size: 28px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.movies-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+  gap: 20px;
+  padding: 0 20px;
+}
+
+.movie-card {
+  position: relative;
+  background-color: #1f1f1f;
+  border-radius: 10px;
+  overflow: hidden;
+  text-align: center;
+  text-decoration: none;
+  color: white;
+  transition: transform 0.3s ease;
+}
+
+.movie-card:hover {
+  transform: scale(1.05);
+}
+
+.movie-poster {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-bottom: 1px solid #333;
+}
+
+.movie-title {
+  font-size: 14px;
+  padding: 10px;
+}
+
+/* Optional: Hover Play Icon */
+.movie-card::after {
+  content: '▶';
+  position: absolute;
+  font-size: 28px;
+  color: white;
+  top: 45%;
+  left: 45%;
+  opacity: 0;
+  transition: 0.3s ease;
+}
+
+.movie-card:hover::after {
+  opacity: 1;
+}
